@@ -1,0 +1,96 @@
+.card {
+    width: 100vw/6;
+    height: 88vh;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    margin-bottom: 8em;
+    padding: 8%;
+    position: relative;
+}
+
+.result-container {
+    overflow-y: scroll;
+    width:100%;
+    margin-top: 1em;
+}
+.result-container::-webkit-scrollbar {
+    display: none;
+}
+
+.header {
+    font-size: 30pt;
+    margin-left: 0.5em;
+    margin-right: 1em;
+    margin-top: 0.5em;
+    opacity: 0.75;
+}
+
+.ride-row {
+    display:block;
+    width:100%;
+    clear:both
+}
+
+.no-data {
+    font-family: 'Titillium Web';
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1em;
+}
+
+.navigation-container {
+    position: absolute;
+    bottom: 1.5em;
+    display: grid;
+    width: 84%;
+    grid-template-columns: 25% 50% 25%;
+}
+
+#next {
+    position: absolute;
+    right: 0;
+}
+
+.data-grid {
+    display: grid;
+    grid-template-columns: 31% auto;
+}
+
+.key-item {
+    font-family: 'Titillium Web';
+    text-align: end;
+    padding-right: 0.75em;
+    opacity: 0.75;
+    margin-bottom: 0;
+}
+
+.location-item {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    font-family: 'Titillium Web';
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.value-item {
+    font-family: 'Titillium Web';
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.button-container {
+    text-align: end;
+    margin-top: 1em;
+}
+
+.button {
+    align-self: flex-end;
+    font-weight: bold;
+}
+
+#page-nummber {
+    font-family: 'Titillium Web';
+    font-size: 1.2rem;
+    margin-top: 0.6em;
+    text-align: center;
+}

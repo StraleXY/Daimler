@@ -1,0 +1,58 @@
+<h1 class="header">DRIVER REQUESTS</h1>
+<div class="card semi-transparent drop-shadow">
+    <div *ngIf="noData">
+        <p class="no-data">NO REQUESTS</p>
+    </div>
+    <tr *ngFor="let req of _driverRequests">
+        <td class="request-row">
+            <div>
+                <div class="prfile-grid">
+                    <span></span>
+                    <img src='{{req.old.profilePicture | urlSentizer}}' class="profile-image old-image"/>
+                    <img src='{{req.updated.profilePicture | urlSentizer}}' class="profile-image"/>
+                    <span></span>
+                </div>
+                
+                <div class="data-grid">
+                    <p class="key-item">Name:</p>
+                    <p class="old-value-item"><s>{{req.old.name}}</s></p>
+                    <p class="key-item"></p>
+                    <p class="value-item">{{req.updated.name}}</p>
+
+                    <p></p> <p></p>
+
+                    <p class="key-item">Surname:</p>
+                    <p class="old-value-item"><s>{{req.old.surname}}</s></p>
+                    <p class="key-item"></p>
+                    <p class="value-item">{{req.updated.surname}}</p>
+
+                    <p></p> <p></p>
+
+                    <p class="key-item">Email:</p>
+                    <p class="old-value-item"><s>{{req.old.email}}</s></p>
+                    <p class="key-item"></p>
+                    <p class="value-item">{{req.updated.email}}</p>
+
+                    <p></p> <p></p>
+
+                    <p class="key-item">Phone:</p>
+                    <p class="old-value-item"><s>{{req.old.telephoneNumber}}</s></p>
+                    <p class="key-item"></p>
+                    <p class="value-item">{{req.updated.telephoneNumber}}</p>
+
+                    <p></p> <p></p>
+
+                    <p class="key-item">Address:</p>
+                    <p class="old-value-item"><s>{{req.old.address}}</s></p>
+                    <p class="key-item"></p>
+                    <p class="value-item">{{req.updated.address}}</p>
+                </div>
+                <div class="button-container">
+                    <button mat-button color="primary" class="button" (click)="approve(req)">APPROVE</button>
+                    <button mat-button color="primary" class="button" (click)="deny(req)">DENY</button>
+                </div>
+                <hr *ngIf="!isSingleItem">
+            </div>
+        </td>
+    </tr>
+</div>

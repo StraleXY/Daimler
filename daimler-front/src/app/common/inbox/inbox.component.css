@@ -1,0 +1,68 @@
+.card {
+    width: 100vw/6;
+    height: 87.25vh;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    position: relative;
+    overflow-y: scroll;
+}
+.card::-webkit-scrollbar {
+    display: none;
+}
+
+.no-data-container {
+    position: absolute;
+    top: 50%;
+    left: 33%;
+}
+
+.header {
+    font-size: 30pt;
+    margin-left: 0.5em;
+    margin-right: 1em;
+    margin-top: 0.5em;
+    opacity: 0.75;
+}
+
+.inbox-item {
+    position: relative;
+}
+
+.with-item {
+    font-family: 'Titillium Web';
+    font-size: 13pt;
+    margin-left: 0.25em;
+}
+
+.type-item {
+    font-family: 'Titillium Web';
+    margin-top: -0.85em;
+    font-weight: bold;
+    font-size: 13.65pt;
+    margin-left: 0.25em;
+}
+
+.message-item { 
+    font-family: 'Titillium Web';
+    margin-top: -1.1em;
+    opacity: 0.65;
+    margin-left: 0.25em;
+    text-overflow: ellipsis;
+    overflow: hidden; 
+    width: 95%; 
+    height: 1.45em; 
+    white-space: nowrap;
+}
+
+.date-item {
+    font-family: 'Titillium Web';
+    margin-top: -0.75em;
+    margin-bottom: -0.5em;
+    margin-right: 0.5em;
+    font-size: 10pt;
+    text-align: end;
+}

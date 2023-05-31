@@ -1,0 +1,14 @@
+<div class="daimler-driver-account">
+    <app-sidebar [selected]="4" [apiPath]="'driver'"></app-sidebar>
+    <div class="row d-flex align-items-center justify-content-center cols-content-div">
+        <div class="col-3 content-col">
+            <app-basic-info-card [basicInfoDTO]="DriverData" (editInfo)="showEditInfo($event)"></app-basic-info-card>
+            <app-pick-profile-pic [hasTitle]="true" [profilePic]="DriverData.profilePicture" (pickedPicture)="profilePicChanged($event)" *ngIf="EditData"></app-pick-profile-pic>
+            <app-edit-basic-info-card [basicInfoDTO]="DriverData" [newProfilePic]="NewProfilePic" (saveInfo)="saveChanges($event)" (editInfo)="showEditInfo($event)" *ngIf="EditData"></app-edit-basic-info-card>
+        </div>
+        <div class="col-6 content-col">
+            <app-stats-preview [userId]="DriverData.id" [isUserSelected]="true"></app-stats-preview>
+        </div>
+        <div class="col-3"></div>
+    </div>
+</div>

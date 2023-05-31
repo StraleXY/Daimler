@@ -1,0 +1,28 @@
+<h1 class="header">NOTES</h1>
+<div class="card semi-transparent drop-shadow">
+
+    <div style="text-align: end;">
+        <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Note Message</mat-label>
+            <textarea #noteMessage matInput [(ngModel)]="noteMessageText" name="noteMessage" maxlength="100"></textarea>
+        </mat-form-field>
+        <button mat-button color="primary" class="button" (click)="addNoteClick(noteMessage.value)">ADD NOTE</button>
+        <hr>
+    </div>
+
+    <div id="notes-div">
+        <div *ngIf="noData">
+            <p class="no-data">NO DATA</p>
+        </div>
+        <tr class="row profile-container" *ngFor="let note of Notes.results">
+            <p class="value-item">{{note.message}}</p>
+            <hr *ngIf="Notes.results[Notes.totalCount - 1].id != note.id">
+        </tr>
+    </div>
+
+    <div class="navigation-container">
+        <button #previous id="previous" mat-icon-button color="primary" class="icon" (click)="previousClick()"><mat-icon>arrow_back_ios</mat-icon></button>
+        <p id="page-nummber">Page {{page}}</p>
+        <button #next id="next" mat-icon-button color="primary" class="icon" (click)="nextClick()"><mat-icon>arrow_forward_ios</mat-icon></button>
+    </div>
+</div>

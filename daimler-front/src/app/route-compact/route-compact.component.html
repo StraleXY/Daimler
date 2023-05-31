@@ -1,0 +1,12 @@
+<div class="card semi-transparent drop-shadow">
+    <div class="row route-content">
+        <div class="col-5 d-flex align-items-center justify-content-center">
+            <h1 class="header">Route A</h1>
+        </div>
+        <div class="col-7 align-items-center justify-content-center">
+            <p class="price">{{data.estimatedCost}}din</p>
+            <hr>
+            <p class="details">{{data.estimatedTimeInMinutes}}min | {{data.distance>1000 ? data.distance.toFixed(1) + "km" : data.distance + "km"}}</p>
+        </div>
+    </div>
+</div>

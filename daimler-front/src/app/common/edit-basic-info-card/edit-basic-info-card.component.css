@@ -1,0 +1,25 @@
+.card {
+    width: 100vw/6;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    padding: 2em;
+}
+
+.header {
+    font-size: 30pt;
+    margin-left: 0.5em;
+    margin-right: 1em;
+    margin-top: 0.5em;
+    opacity: 0.75;
+}
+
+mat-form-field {
+    display:block;
+    margin-bottom: -1em;
+}
+
+.button {
+    align-self: flex-end;
+    margin-top: 0.5em;
+    font-weight: bold;
+}

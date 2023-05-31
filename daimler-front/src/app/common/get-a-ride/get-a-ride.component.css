@@ -1,0 +1,19 @@
+.card {
+    width: 21vw;
+    padding: 2em;
+}
+
+.header {
+    font-size: 34pt;
+}
+
+mat-form-field {
+    display:block;
+    margin-bottom: -1em;
+}
+
+button {
+    width: 100%;
+    letter-spacing: .2rem;
+    padding: 1.75em;
+}

@@ -1,0 +1,16 @@
+<div class="daimler-passenger-account">
+    <app-sidebar [selected]="4" [apiPath]="'passenger'"></app-sidebar>
+    <div class="row d-flex align-items-start justify-content-center cols-content-div">
+        <div class="col-3 content-col">
+            <app-basic-info-card [basicInfoDTO]="PassengerData" (editInfo)="showEditInfo($event)"></app-basic-info-card>
+            <app-pick-profile-pic [hasTitle]="true" [profilePic]="PassengerData.profilePicture" (pickedPicture)="profilePicChanged($event)" *ngIf="EditData"></app-pick-profile-pic>
+            <app-edit-basic-info-card [basicInfoDTO]="PassengerData" [newProfilePic]="NewProfilePic" (saveInfo)="saveChanges($event)" (editInfo)="showEditInfo($event)" *ngIf="EditData"></app-edit-basic-info-card>
+        </div>
+        <div class="col-3">
+            <app-favorite-routes-card></app-favorite-routes-card>
+        </div>
+        <div class="col-6 content-col">
+            <app-stats-preview [userId]="PassengerData.id" [isUserSelected]="true"></app-stats-preview>
+        </div>
+    </div>
+</div>

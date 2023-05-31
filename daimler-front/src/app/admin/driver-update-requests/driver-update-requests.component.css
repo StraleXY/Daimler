@@ -1,0 +1,87 @@
+.card {
+    width: 100vw/6;
+    max-height: 90vh;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    padding-top: 3em;
+    margin-bottom: 7em;
+    padding: 2em;
+    overflow-y: scroll;
+}
+
+.card::-webkit-scrollbar {
+    display: none;
+}
+
+.header {
+    font-size: 30pt;
+    margin-left: 0.5em;
+    margin-right: 1em;
+    margin-top: 0.5em;
+    opacity: 0.75;
+}
+
+.no-data {
+    font-family: 'Titillium Web';
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1em;
+}
+
+.prfile-grid {
+    margin-top: 2em;
+    display: grid;
+    grid-template-columns: auto 6em 6em auto;
+}
+
+.old-image {
+    opacity: 40%;
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 5em;
+    align-self: center;
+}
+
+.request-row {
+    display:block;
+    width:100%;
+    clear:both
+}
+
+.data-grid {
+    display: grid;
+    grid-template-columns: 35% auto;
+    margin-top: 2em;
+}
+
+.key-item {
+    font-family: 'Titillium Web';
+    text-align: end;
+    padding-right: 0.75em;
+    opacity: 0.75;
+    margin-bottom: 0;
+}
+
+.old-value-item {
+    font-family: 'Titillium Web';
+    opacity: 0.75;
+    margin-bottom: 0;
+}
+
+.value-item {
+    font-family: 'Titillium Web';
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.button-container {
+    text-align: end;
+    margin-top: 3em;
+}
+
+.button {
+    align-self: flex-end;
+    font-weight: bold;
+}

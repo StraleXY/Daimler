@@ -1,0 +1,39 @@
+<div class="card semi-transparent drop-shadow">
+
+    <div class="time-picker-container">
+        <div class="time-picker-column">
+            <button class="time-picker-buttons time-picker-shift" (click)="addHours()" mat-icon-button color="primary"><mat-icon>expand_less</mat-icon></button>
+            <input class="time-picker-input" [(ngModel)]="hours" (keyup.enter)="timeSelected()" (focusout)="timeSelected()" type="number">
+            <button class="time-picker-buttons" (click)="removeHours()" mat-icon-button color="primary"><mat-icon>expand_more</mat-icon></button>
+        </div>
+        <p class="time-picker-separator">:</p>
+        <div class="time-picker-column">
+            <button class="time-picker-buttons time-picker-shift" (click)="addMinutes()" mat-icon-button color="primary"><mat-icon>expand_less</mat-icon></button>
+            <input class="time-picker-input" [(ngModel)]="minutes" (keyup.enter)="timeSelected()" (focusout)="timeSelected()" type="number">
+            <button class="time-picker-buttons" (click)="removeMinutes()" mat-icon-button color="primary"><mat-icon>expand_more</mat-icon></button>
+        </div>
+    </div>
+
+    <p class="subtitle">Special requirements</p>
+    <form
+        class="form"
+        [formGroup]="babyPetsForm"
+        (ngSubmit)="submit($event)">
+        <div>
+            <mat-checkbox color="primary"
+                formControlName="hasBaby">Baby</mat-checkbox>
+        </div>
+        <div>
+            <mat-checkbox color="primary"
+                formControlName="hasPet">Pets</mat-checkbox>
+        </div>
+        <hr>
+        <div>
+            <mat-checkbox color="primary"
+                formControlName="isFavourite">Add to favourites</mat-checkbox>
+        </div>
+        <div class="fix-end">
+            <button id="more-settings-confirm" mat-button color="primary" type="submit">CONFIRM</button>
+        </div>
+    </form>
+</div>

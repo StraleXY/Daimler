@@ -1,0 +1,51 @@
+<h1 class="header" *ngIf="hasTitle">EDIT</h1>
+<div style="height: 0.5em;" *ngIf="!hasTitle"></div>
+<div class="card semi-transparent drop-shadow">
+    <form
+        class="form"
+        [formGroup]="editUserForm"
+        (ngSubmit)="update($event)">
+        <mat-form-field appearance="outline" style="margin-top: 0.5em;">
+            <mat-label>Name</mat-label>
+            <input matInput name="name" formControlName="name" ngModel="{{basicInfoDTO.name}}">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Surname</mat-label>
+            <input matInput matInput name="surname" formControlName="surname" ngModel="{{basicInfoDTO.surname}}">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Phone</mat-label>
+            <input matInput name="phone" formControlName="phone" ngModel="{{basicInfoDTO.telephoneNumber}}">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput name="email" formControlName="email" ngModel="{{basicInfoDTO.email}}">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Address</mat-label>
+            <input matInput name="address" formControlName="address" ngModel="{{basicInfoDTO.address}}">
+        </mat-form-field>
+
+        <mat-checkbox #changePassword [color]="'primary'" (change)="changePasswordCheckChanged($event)" style="margin-bottom: 0.3em;">Change password!</mat-checkbox>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput name="password" formControlName="password" [type]="hidePassword ? 'password' : 'text'">
+            <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword"
+                [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hidePassword">
+                <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Confirm password</mat-label>
+            <input matInput name="confirmPassword" formControlName="confirmPassword" [type]="hideConfirmPassword ? 'password' : 'text'">
+            <button mat-icon-button matSuffix (click)="hideConfirmPassword = !hideConfirmPassword"
+                [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hideConfirmPassword">
+                <mat-icon>{{hideConfirmPassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+        </mat-form-field>
+
+        <button mat-button color="primary" class="button" type="submit">SAVE</button>
+        <button mat-button color="primary" class="button" (click)="toggleEditInfo()">CANCEL</button>
+    </form>
+</div>

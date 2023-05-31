@@ -1,0 +1,74 @@
+.daimler-home-main {
+    height:100vh;
+    width: 100vw;
+    max-height: 100vh;
+    max-width: 100vw;
+    background-image: url("src/assets/background.jpeg");
+}
+
+.daimler-home-div {
+    height:100vh;
+    width: 100vw;
+}
+
+.landing-content {
+    align-content: center;
+    text-align: center;
+}
+
+app-nav-main {
+    position: absolute;
+}
+
+.landing-description {
+    font-family: "Cardo";
+    font-size: 24pt;
+}
+
+.landing-button {
+    margin: 2em;
+    letter-spacing: 0.15rem;
+    font-weight: 500;
+    padding: 1.65em;
+    stroke-width: 5rem;
+    border-radius: 5em;
+    border-width: 0.1em;
+    border-color: var(--color-primary);
+}
+
+.map-container {
+    height:100vh;
+    width: 100vw;
+    max-height: 100vh;
+    max-width: 100vw;
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    right: 1.5em;
+    top: 1.5em;
+    z-index: 55;
+}
+
+.top-left {
+    position: absolute;
+    left: 1.5em;
+    top: 1.5em;
+    z-index: 55;
+}
+
+.map-view {
+    height:100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: 5;
+}
+
+.top-left-second {
+    position: absolute;
+    left: 1.5em;
+    top: 26em;
+    z-index: 55;
+}
+

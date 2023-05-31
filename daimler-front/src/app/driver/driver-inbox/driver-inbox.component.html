@@ -1,0 +1,13 @@
+<div class="daimler-page">
+    <app-sidebar [selected]="2" [apiPath]="'driver'"></app-sidebar>
+    <div class="row d-flex align-items-top justify-content-center cols-content-div">
+        <div class="col-3 content-col">
+            <app-inbox [showForRide]="showRideId"></app-inbox>
+        </div>
+        <div class="col-6 content-col">
+            <app-chat></app-chat>
+        </div>
+        <div class="col-3">
+        </div>
+    </div>
+</div>

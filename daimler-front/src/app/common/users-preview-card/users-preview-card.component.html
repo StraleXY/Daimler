@@ -1,0 +1,21 @@
+<h1 class="header">{{Title}}</h1>
+<div class="card semi-transparent drop-shadow">
+    <tr *ngFor="let user of Users">
+        <td class="request-row">
+            <div>
+                <div class="data-container">
+                    <img src='{{user.profilePicture | urlSentizer}}' class="profile-image"/>
+
+                    <div class="data-grid">
+                        <p class="key-item">Name:</p>
+                        <p class="value-item">{{user.name}} {{user.surname}}</p>
+
+                        <p class="key-item">Email:</p>
+                        <p class="value-item">{{user.email}}</p>
+                    </div>
+                </div>
+                <hr *ngIf="Users[Users.length - 1].id != user.id">
+            </div>
+        </td>
+    </tr>
+</div>

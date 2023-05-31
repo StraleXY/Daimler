@@ -1,0 +1,14 @@
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+::ng-deep .leaflet-control-zoom {
+    position:absolute;
+    top: 90vh;
+    left: 2vw;
+}
+
+::ng-deep .leaflet-routing-container {
+    display: none;
+}

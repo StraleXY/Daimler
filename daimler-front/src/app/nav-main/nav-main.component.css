@@ -1,0 +1,42 @@
+p {
+    display: inline;
+}
+
+.logo-div {
+    padding-left: 4em;
+    padding-top: 0.5em;
+}
+
+.letter-d {
+    font-size: 45pt;
+}
+
+.letter-aimler {
+    font-size: 21pt;
+    position:relative;
+    bottom: 0.15em;
+    left: -0.15em;
+}
+
+.nav-main {
+    font-family: "Cardo";
+    font-weight: normal;
+    width: 100vw;
+    max-width: 100vw;
+}
+
+.login-register {
+    font-size: 14pt;
+}
+
+.login {
+    position: absolute;
+    top: 2em;
+    right: 9.5em;
+}
+
+.register {
+    position: absolute;
+    top: 2em;
+    right: 2.5em;
+}

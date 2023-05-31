@@ -1,0 +1,12 @@
+<div class="card semi-transparent drop-shadow">
+    <div class="row route-content">
+        <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Rejection reason</mat-label>
+            <textarea #rejectionReason matInput [(ngModel)]="rejectionReasonText" name="rejectionReason" maxlength="150"></textarea>
+        </mat-form-field>
+        <div>
+            <button mat-stroked-button class="button" (click)="cancelClick()" style="margin-right: 1.5%;">CANCEL</button>
+            <button mat-flat-button color="primary" class="button" (click)="rejectClick()" style="margin-left: 1.5%;">REJECT</button>
+        </div>
+    </div>
+</div>

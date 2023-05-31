@@ -1,0 +1,8 @@
+<div class="root"> 
+    <button #home id="sidebar_home" mat-icon-button color="accent" class="icon" [style.opacity]="home_opacity" (click)="navigationClick('home')"><mat-icon>home</mat-icon></button>
+    <button #inbox id="sidebar_inbox" mat-icon-button color="accent" class="icon" [style.opacity]="inbox_opacity" (click)="navigationClick('inbox')"><mat-icon>inbox</mat-icon></button>
+    <button #history id="sidebar_history" mat-icon-button color="accent" class="icon" [style.opacity]="history_opacity" (click)="navigationClick('history')"><mat-icon>history</mat-icon></button>
+    <button #account id="sidebar_account" mat-icon-button color="accent" class="icon" [style.opacity]="account_opacity" (click)="navigationClick('account')"><mat-icon>account_circle</mat-icon></button>
+    <button *ngIf="isAdmin" #block id="sidebar_block" mat-icon-button color="accent" class="icon" [style.opacity]="block_opacity" (click)="navigationClick('block')"><mat-icon>block</mat-icon></button>
+    <button #exit id="sidebar_logout" mat-icon-button color="accent" class="exit" (click)="navigationClick('exit')"><mat-icon>exit_to_app</mat-icon></button>
+</div>

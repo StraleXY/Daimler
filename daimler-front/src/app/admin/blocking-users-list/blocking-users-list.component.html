@@ -1,0 +1,25 @@
+<h1 class="header">USERS</h1>
+<div class="card semi-transparent drop-shadow">
+
+    <tr class="row profile-container" *ngFor="let user of Users.results">
+        <img class="col-3 profile-image" src='{{user.profilePicture | urlSentizer}}'/>
+        <div class="col-9 profile-info">
+            <p class="value-item">{{user.name}} {{user.surname}}</p>
+            <p class="email">{{user.email}}</p>
+            <p class="email">ID: {{user.id}}</p>
+        </div>
+        <div class="button-container">
+            <button mat-button color="primary" class="button" (click)="showNotesClick(user)">NOTES</button>
+            <button mat-button color="primary" class="button" *ngIf="!user.blocked" (click)="blockClick(user)">BLOCK</button>
+            <button mat-button color="primary" class="button" *ngIf="user.blocked" (click)="unblockClick(user)">UNBLOCK</button>
+        </div>
+        <hr *ngIf="Users.results[Users.totalCount - 1].id != user.id">
+        <!-- <div *ngIf="user.id == lastItemId" class="devider"></div> -->
+    </tr>
+
+    <div class="navigation-container">
+        <button #previous id="previous" mat-icon-button color="primary" class="icon" (click)="previousClick()"><mat-icon>arrow_back_ios</mat-icon></button>
+        <p id="page-nummber">Page {{page}}</p>
+        <button #next id="next" mat-icon-button color="primary" class="icon" (click)="nextClick()"><mat-icon>arrow_forward_ios</mat-icon></button>
+    </div>
+</div>

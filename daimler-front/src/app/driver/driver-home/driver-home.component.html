@@ -1,0 +1,29 @@
+<div class="daimler-driver-home">
+    <app-sidebar [selected]="1" [apiPath]="'driver'"></app-sidebar>
+    <div class="row d-flex align-items-center justify-content-center">
+        <div #mapContent class="map-container">
+            <div class="top-right">
+                <div class="card semi-transparent drop-shadow">
+                    <mat-button-toggle-group name="status" [value]="active?'active':'inactive'">
+                        <mat-button-toggle value="inactive" (click)="setActive(false)">INACTIVE</mat-button-toggle>
+                        <mat-button-toggle value="active" (click)="setActive(true)">ACTIVE</mat-button-toggle>
+                    </mat-button-toggle-group>
+                </div>
+
+                <div *ngIf="showRouteDetails">
+                    <div class="devider"></div>
+                    <app-driver-new-ride [_ride]="ride" (reject)="reject()"
+                        (start)="start()" (end)="end()" (panic)="panic()"></app-driver-new-ride>
+                </div>
+                <div *ngIf="isRejection">
+                    <div class="devider"></div>
+                    <app-driver-reject (cancel)="cancelListener($event)"
+                        (reject)="rejectListener($event)" (rejectionText)="rejectionTextListener($event)"></app-driver-reject>
+                </div>
+            </div>
+
+            <app-map class="map-view" [waypoints]="waypoints" [isRoute]="true" [isInteractive]="false"
+                [isDraggable]="false" [isVehicleMarker]="true" [vehicleLocation]="currentVehicleLocation" [isDriver]="true"></app-map>
+        </div>
+    </div>
+</div>

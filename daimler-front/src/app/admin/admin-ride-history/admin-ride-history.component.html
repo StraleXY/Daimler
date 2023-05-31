@@ -1,0 +1,32 @@
+<div class="root">
+    <app-sidebar [selected]="3" [apiPath]="'admin'" [isAdmin]="true"></app-sidebar>
+    <div class="row d-flex justify-content-center cols-content-div">
+        <div class="col-3">
+            <h1 class="header">SELECT USER</h1>
+            <div class="card semi-transparent drop-shadow">
+                <div id="search-controls-form">
+                    <mat-form-field appearance="outline">
+                        <mat-label>User ID</mat-label>
+                        <input matInput #userIdField name="userId" (focus)="onFieldFocus()">
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" style="margin-bottom: 0.5em;">
+                        <mat-label>Role</mat-label>
+                        <mat-select #roleSelector (selectionChange)="roleSelectionChanged($event)" [value]="ROLE_DRIVER" (opened)="onFieldFocus()">
+                            <mat-option *ngFor="let option of roles" [value]="option.value">
+                                {{option.viewValue}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <button mat-button color="primary" class="button" (click)="userSelected(userIdField.value)">SHOW</button>
+            </div>
+            <app-users-preview-card #passengersPreview [Title]="'SELECTED ' + roleSelector.value.toUpperCase()"></app-users-preview-card>
+        </div>
+        <div class="col-3">
+            <app-route-history-card #basicHistoryCard (onPageRequested)="pageRequested($event)" [userId]="6" (onDetailsRequested)="detailsRequested($event)"></app-route-history-card>
+        </div>
+        <div class="col-6">
+            <app-detailed-ride-preview #detailsCard [showControls]="false"></app-detailed-ride-preview>
+        </div>
+    </div>
+</div>

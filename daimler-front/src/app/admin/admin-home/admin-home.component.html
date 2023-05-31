@@ -1,0 +1,14 @@
+<div class="daimler-home">
+    <app-sidebar [selected]="1" [apiPath]="'admin'"></app-sidebar>
+    <div class="row d-flex align-items-center justify-content-center">
+        <div #mapContent class="map-container">
+            <div class="top-right">
+                <div *ngIf="panicVisibility" @inOutPaneAnimation>
+                    <app-user-panic-notification [panicDTO]="panicDTO"></app-user-panic-notification>
+                </div>
+            </div>
+
+            <app-map class="map-view" [isRoute]="false" [isMarker]="true" [isInteractive]="false" [setPanic]="panicDTO.vehicleId"></app-map>
+        </div>
+    </div>
+</div>

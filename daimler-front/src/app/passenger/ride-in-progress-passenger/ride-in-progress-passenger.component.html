@@ -1,0 +1,27 @@
+<div class="card semi-transparent drop-shadow">
+
+    <div class="row route-content">
+        <div class="col-5 d-flex align-items-center justify-content-center">
+            <h1 class="subtitle">Ongoing</h1>
+        </div>
+        <div class="col-7 align-items-center justify-content-center">
+            <p class="price">{{_ride.estimatedTimeInMinutes}}min</p>
+            <hr>
+            <p class="details">{{_ride.totalCost}}din</p>
+        </div>
+    </div>
+
+
+    <hr>    
+    <p id="vehicle-info">{{vehicle.licenseNumber}} ● {{vehicle.model}}</p>
+    <hr>
+
+    <div class="row profile-container">
+        <img class="col-4 profile-image" src='{{driver.profilePicture | urlSentizer}}'/>
+        <div class="col-8 profile-info">
+            <p class="value-item">{{driver.name}} {{driver.surname}}</p>
+            <p class="phone">{{driver.telephoneNumber}}</p>
+        </div>
+    </div>
+</div>
+<button class="button" mat-flat-button color="warn" (click)="panicClick()">PANIC</button>

@@ -1,0 +1,17 @@
+.daimler-root {
+    height:100vh;
+    max-height: 100vh;
+    max-width: 100vw;
+    background-image: url("src/assets/background.jpeg");
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.content-col {
+    overflow-y: scroll;
+    height: 100vh;
+    padding-bottom: 2.5em;
+}
+.content-col::-webkit-scrollbar {
+    display: none;
+}

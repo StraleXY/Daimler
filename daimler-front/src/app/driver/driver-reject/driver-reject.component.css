@@ -1,0 +1,42 @@
+.card {
+    width: 21vw;
+    padding: 1.5em;
+}
+
+.header {
+    font-size: 20pt;
+    font-family: "Titillium Web";
+    font-style: normal;
+    text-align: left;
+}
+
+mat-form-field {
+    display:block;
+    margin-bottom: -1em;
+}
+
+button {
+    width: 48.5%;
+    letter-spacing: .2rem;
+    font-size: 11pt;
+    padding: 1.65em;
+    border-radius: 0.5em;
+}
+
+route-content {
+    width: 100%;
+}
+
+.price {
+    font-family: "Economica";
+    font-size: 28pt;
+    text-align: right;
+    margin-bottom: -0.5em;
+}
+
+.details {
+    font-family: "Titillium Web";
+    font-size: 13pt;
+    text-align: right;
+    margin-top: -0.5em;
+}

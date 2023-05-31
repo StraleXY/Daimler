@@ -1,0 +1,22 @@
+<div #daimlerHomeMain class="daimler-home-main">
+    <app-nav-main></app-nav-main>
+    <div class="left-div col-2"></div>
+    <div class="daimler-home-div row d-flex align-items-center justify-content-center">
+        <div class="landing-content col-4">
+            <h1 class="landing-description">Welcome to Daimler</h1>
+            <h1 class="landing-description">With just a couple of clicks, you can order a taxi to your front door!</h1>
+            <button class="landing-button" mat-stroked-button color="primary" (click)="scroll(mapContent)">TRY IT OUT</button>
+        </div>
+    </div>
+    <div class="right-div col-2"></div>
+    <div #mapContent class="map-container">
+        <button mat-fab class="top-right" (click)="scroll(daimlerHomeMain)" color="primary">
+            <mat-icon>keyboard_arrow_up</mat-icon>
+        </button>
+        <app-get-a-ride class="top-left" (isToggled)="toggle($event)" (estimation)="estimate($event)"
+            (waypoints)="waypointEvent($event)" [firstInput]="first" [secondInput]="second"></app-get-a-ride>
+        <app-route-compact class="top-left-second" *ngIf="isToggled" [data]="estimation"></app-route-compact>
+        <app-map class="map-view" [waypoints]="waypoints" [isRoute]="true" [isMarker]="true"
+            (first)="setFirst($event)" (second)="setSecond($event)"></app-map>
+    </div>
+</div>

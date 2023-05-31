@@ -1,0 +1,58 @@
+.card {
+    width: 21vw;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 2em;
+    padding-bottom: 1.5em;
+}
+
+h1 {
+    font-family: 'Economica';
+    text-align: center;
+}
+
+#on-the-way {
+    font-family: 'Titillium Web';
+    opacity: 0.5;
+    text-align: center;
+}
+
+#vehicle-info {
+    font-family: 'Titillium Web';
+    font-size: 13pt;
+    margin-bottom: 0;
+    margin-top: 0.5em;
+    text-align: center;
+}
+
+.profile-container {
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+}
+
+.profile-info {
+    padding: 0;
+    padding-top: 0.4em;
+    padding-left: 0.25em;
+}
+
+.profile-image {
+    border-radius: 50%;
+    align-self: center;
+}
+
+.value-item {
+    font-family: 'Titillium Web';
+    font-weight: bold;
+    font-size: 15pt;
+    text-align: end;
+    margin-right: 1em;
+    margin-bottom: 0;
+}
+.phone {
+    font-family: 'Titillium Web';
+    text-align: end;
+    font-size: 13pt;
+    margin-right: 1.2em;
+    margin-bottom: 0;
+}
