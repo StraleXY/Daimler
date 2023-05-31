@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/passengerMainRoot"
+    tools:context=".view.passenger.activity.PassengerMainActivity">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/passenger_map_fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <!-- NE STAVLJAJ NISTA IZNAD OVOGA -->
+
+        <RelativeLayout
+            android:id="@+id/finished_ride_fragment_passenger"
+            android:layout_width="420dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="80dp"
+            android:clipToPadding="false"
+            android:layout_gravity="bottom|end"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="40dp"
+            android:paddingHorizontal="25dp"
+            android:clipToPadding="false"
+            android:layout_gravity="top|end">
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/passenger_ride_timer_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:cardCornerRadius="@dimen/corner_radius_standard"
+                app:cardElevation="8dp">
+
+                <TextView
+                    android:id="@+id/passenger_ride_timer"
+                    android:layout_width="100dp"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/tw_regular"
+                    android:textSize="22sp"
+                    android:textColor="@color/primary" />
+            </com.google.android.material.card.MaterialCardView>
+        </RelativeLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/scheduled_ride_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:layout_marginHorizontal="16dp"
+            app:cardCornerRadius="@dimen/corner_radius_standard"
+            app:cardElevation="16dp"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="20dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SCHEDULED"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/tw_regular"
+                        android:textSize="16sp"/>
+                    <TextView
+                        android:id="@+id/scheduled_ride_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/tw_extra_light"
+                        android:textSize="34sp"/>
+                </LinearLayout>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginVertical="6dp"
+                    android:layout_marginHorizontal="16dp"
+                    app:cardElevation="0dp"
+                    android:background="?attr/colorOnPrimary"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text="FROM:"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/tw_extra_light"
+                            android:textAlignment="viewEnd"
+                            android:layout_marginEnd="8dp"
+                            android:textSize="15sp"/>
+                        <TextView
+                            android:id="@+id/scheduled_ride_from"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/tw_regular"
+                            android:textSize="17sp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text="TO:"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/tw_extra_light"
+                            android:textAlignment="viewEnd"
+                            android:layout_marginEnd="8dp"
+                            android:textSize="15sp"/>
+                        <TextView
+                            android:id="@+id/scheduled_ride_to"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/tw_regular"
+                            android:textSize="17sp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_add_24"
+            android:contentDescription="@string/description_start_ride"
+            android:backgroundTint="?colorPrimaryVariant"
+            android:layout_gravity="bottom|end"
+            android:visibility="gone"
+            android:layout_margin="16dp"/>
+
+        <!-- AppBar -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/customAppBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="18dp"
+            android:layout_marginHorizontal="16dp"
+            app:cardCornerRadius="@dimen/corner_radius_standard"
+            app:cardElevation="16dp">
+
+            <!-- AppBar Icons -->
+            <LinearLayout
+                android:id="@+id/passenger_appbar_placeholder"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="8dp"
+                android:orientation="horizontal"
+                android:animateLayoutChanges="true">
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="24dp"
+                    android:layout_marginHorizontal="@dimen/appbar_items_spacing"
+                    android:layout_gravity="center_vertical"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_baseline_account_details_24"
+                    android:onClick="showAccountDetails"/>
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="24dp"
+                    android:layout_marginHorizontal="@dimen/appbar_items_spacing"
+                    android:layout_gravity="center_vertical"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_baseline_inbox_24"
+                    android:onClick="showInbox"/>
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="24dp"
+                    android:layout_marginHorizontal="@dimen/appbar_items_spacing"
+                    android:layout_gravity="center_vertical"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_baseline_history_24"
+                    android:onClick="showRideHistory"/>
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="24dp"
+                    android:layout_marginHorizontal="@dimen/appbar_items_spacing"
+                    android:layout_gravity="center_vertical"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_baseline_exit_to_app_24"
+                    android:onClick="logout"/>
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="1dp"
+                    android:layout_marginVertical="6dp"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_height="match_parent"/>
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="24dp"
+                    android:layout_marginHorizontal="@dimen/appbar_items_spacing"
+                    android:layout_gravity="center_vertical"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_baseline_add_location_24"
+                    android:id="@+id/new_ride_button_passenger"
+                    android:onClick="onNewRideClick"/>
+            </LinearLayout>
+
+            <!-- Step 1 - Points -->
+            <LinearLayout
+                android:id="@+id/passenger_points_placeholder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"/>
+
+            <!-- Step 2 - Route Suggestion -->
+            <LinearLayout
+                android:id="@+id/passenger_route_suggestion_placeholder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"/>
+
+            <!-- Step 3 - Add Friends -->
+            <LinearLayout
+                android:id="@+id/passenger_friends_placeholder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"/>
+
+            <!-- Step 4 - Ride Properties -->
+            <LinearLayout
+                android:id="@+id/passenger_ride_properties_placeholder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"/>
+
+            <!-- Step 5 - Driver Info -->
+            <LinearLayout
+                android:id="@+id/passenger_driver_info_placeholder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"/>
+
+            <!-- Back icon -->
+            <LinearLayout
+                android:id="@+id/passenger_steps_navigation_placeholder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|start">
+                <ImageButton
+                    android:id="@+id/passenger_appbar_navigation_previous"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="24dp"
+                    android:layout_marginStart="32dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="fitCenter"
+                    android:onClick="previousStep"
+                    android:rotation="270"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_baseline_arrow_left_24"/>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

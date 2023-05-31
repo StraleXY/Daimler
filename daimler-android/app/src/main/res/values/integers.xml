@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <integer name="default_animDuration">500</integer>
+  <integer name="default_minAnimDuration">200</integer>
+  <integer name="default_gridLinesCount">1</integer>
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#ffffff</color>
+    <color name="primary_light">#e0e0e0</color>
+    <color name="primary_dark">#727272</color>
+    <color name="secondary">#858585</color>
+    <color name="secondary_light">#efefef</color>
+    <color name="secondary_dark">#313131</color>
+    <color name="on_surface">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- Green Theme
+        <color name="primary">#c0ca33</color>
+        <color name="primary_variant">#8c9900</color>
+        <color name="secondary">#858585</color>
+        <color name="secondary_light">#efefef</color>
+        <color name="secondary_dark">#212121</color>
+        <color name="on_surface">#FFFFFFFF</color>
+        <color name="black">#FF000000</color>
+        <color name="white">#FFFFFFFF</color>
+        <color name="transparent">#00000000</color>
+    -->
+
+    <!-- Chart colors -->
+    <color name="default_gridLinesColor">#bdbdbd</color>
+    <color name="default_barColor">#0099cc</color>
+    <color name="default_barBackgroundColor">#190099cc</color>
+</resources>

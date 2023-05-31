@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.passenger.fragment.PassengerNewRoutePointsFragment"
+    android:layout_marginBottom="12dp"
+    android:layout_marginTop="32dp"
+    android:orientation="vertical"
+    android:visibility="gone"
+    android:animateLayoutChanges="true"
+    android:id="@+id/passenger_points_root">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add More Passengers"
+        android:fontFamily="@font/tw_regular"
+        android:textSize="26sp"
+        android:textColor="@color/primary"
+        android:layout_marginHorizontal="38dp"
+        android:layout_marginVertical="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add friends to your ride via their email! This is an optional step."
+        android:layout_marginHorizontal="38dp"
+        android:layout_marginBottom="16dp"
+        android:textSize="16sp"
+        android:alpha="0.6"
+        android:fontFamily="@font/tw_light"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginHorizontal="38dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/i_input_v"
+            style="@style/Widget.App.CornerLayoutBox"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:hint="Friends Emails">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:gravity="bottom"
+                android:paddingBottom="22dp"
+                android:layout_height="match_parent" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/i_flex_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="50dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            app:chipSpacingVertical="-8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/passenger_friends_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:layout_gravity="end"
+        android:textAlignment="viewEnd"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginHorizontal="34dp"
+        style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+</LinearLayout>

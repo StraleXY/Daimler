@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.passenger.fragment.PassengerNewRoutePointsFragment"
+    android:layout_marginBottom="12dp"
+    android:layout_marginTop="32dp"
+    android:orientation="vertical"
+    android:visibility="gone"
+    android:animateLayoutChanges="true"
+    android:id="@+id/passenger_points_root">
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/passenger_ride_time_selector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
+        android:gravity="center"
+        app:singleSelection="true"
+        app:selectionRequired="true">
+        <Button
+            android:id="@+id/passenger_ride_time_now"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="@string/button_now"
+            android:backgroundTint="@color/transparent"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+        <Button
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text="@string/button_schedule"
+            android:backgroundTint="@color/transparent"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <LinearLayout
+        android:id="@+id/passenger_points_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="38dp"
+        android:layout_marginVertical="8dp"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/passenger_points_scheduled_time"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="20:45"
+            android:textSize="38dp"
+            android:fontFamily="@font/economica"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/passenger_points_pick_time"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Pick time"
+            android:layout_gravity="end"
+            android:textAlignment="viewEnd"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="2dp"
+            style="@style/Widget.MaterialComponents.Button.TextButton"/>
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Pickup Address"
+        android:layout_marginVertical="5dp"
+        android:layout_marginHorizontal="38dp"
+        style="@style/Widget.App.CornerLayoutBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/departure_address_field"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Destination Address"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginHorizontal="38dp"
+        style="@style/Widget.App.CornerLayoutBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/destination_address_field"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/passenger_points_find"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Find ride"
+        android:layout_gravity="end"
+        android:textAlignment="viewEnd"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginHorizontal="34dp"
+        style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+</LinearLayout>

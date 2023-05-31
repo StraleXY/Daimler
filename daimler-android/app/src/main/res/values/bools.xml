@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <bool name="default_animState">true</bool>
+  <bool name="default_showGridLinesX">false</bool>
+  <bool name="default_showGridLinesY">false</bool>
+  <bool name="default_autoShow">true</bool>
+  <bool name="default_barPaintBackground">false</bool>
+</resources>

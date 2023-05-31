@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/accountAppBar"
+        android:icon="@drawable/ic_baseline_account_details_24"
+        android:title="@string/menu_account_info"
+        android:contentDescription="@string/menu_account_info"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/inboxAppBar"
+        android:icon="@drawable/ic_baseline_inbox_24"
+        android:title="@string/menu_inbox"
+        android:contentDescription="@string/menu_inbox"
+        android:iconTint="@color/black"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/historyAppBar"
+        android:icon="@drawable/ic_baseline_history_24"
+        android:title="@string/menu_history"
+        android:contentDescription="@string/menu_history"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/logoutAppBar"
+        android:icon="@drawable/ic_baseline_exit_to_app_24"
+        android:title="@string/menu_logout"
+        android:contentDescription="@string/menu_logout"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/settingsAppBar"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="@string/menu_settings"
+        android:contentDescription="@string/menu_settings"
+        app:showAsAction="never"/>
+</menu>
