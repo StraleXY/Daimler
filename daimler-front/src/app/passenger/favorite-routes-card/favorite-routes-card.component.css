@@ -1,0 +1,67 @@
+.card {
+    width: 100vw/6;
+    height: 88vh;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    margin-bottom: 8em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    position: relative;
+    overflow-y: scroll;
+}
+
+.card::-webkit-scrollbar {
+    display: none;
+}
+
+.header {
+    font-size: 30pt;
+    margin-left: 0.5em;
+    margin-right: 1em;
+    margin-top: 0.5em;
+    opacity: 0.75;
+}
+
+.ride-row {
+    display:block;
+    width:100%;
+    clear:both
+}
+
+.no-data-container {
+    position: absolute;
+    top: 50%;
+    left: 39%;
+}
+
+.data-grid {
+    display: grid;
+    grid-template-columns: 31% auto;
+    margin-top: 1em;
+}
+
+.key-item {
+    font-family: 'Titillium Web';
+    text-align: end;
+    padding-right: 0.75em;
+    opacity: 0.75;
+    margin-bottom: 0;
+}
+
+.value-item {
+    font-family: 'Titillium Web';
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.button-container {
+    text-align: end;
+}
+
+.button {
+    align-self: flex-end;
+    font-weight: bold;
+    margin-top: 1em;
+}

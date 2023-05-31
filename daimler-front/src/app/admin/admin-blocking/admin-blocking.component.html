@@ -1,0 +1,14 @@
+<div class="daimler-root">
+    <app-sidebar [selected]="5" [apiPath]="'admin'" [isAdmin]="true"></app-sidebar>
+    <div class="row d-flex align-items-top justify-content-center cols-content-div">
+        <div class="col-3">
+            <app-blocking-users-list></app-blocking-users-list>
+        </div>
+        <div class="col-3">
+            <app-user-notes-list></app-user-notes-list>
+        </div>
+        <div class="col-6 content-col">
+            <app-stats-preview [isUserSelected]="false"></app-stats-preview>
+        </div>
+    </div>
+</div>

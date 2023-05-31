@@ -1,0 +1,58 @@
+.card {
+    width: 100vw/6;
+    max-height: 88vh;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    padding-top: 3em;
+    margin-bottom: 7em;
+    padding: 2em;
+    overflow-y: scroll;
+}
+
+.card::-webkit-scrollbar {
+    display: none;
+}
+
+.header {
+    font-size: 30pt;
+    margin-left: 0.5em;
+    margin-right: 1em;
+    margin-top: 0.5em;
+    opacity: 0.75;
+}
+
+.request-row {
+    display:block;
+    width:100%;
+    clear:both
+}
+
+.data-container {
+    text-align: center;
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 5em;
+    margin-bottom: 2em;
+    margin-top: 1em;
+    align-self: center;
+}
+
+.data-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.key-item {
+    font-family: 'Titillium Web';
+    text-align: end;
+    padding-right: 0.75em;
+    opacity: 0.75;
+}
+
+.value-item {
+    font-family: 'Titillium Web';
+    font-weight: bold;
+    text-align: start;
+}

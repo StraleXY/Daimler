@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:maxWidth="450dp"
+    android:minWidth="380dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.passenger.fragment.PassengerNewRoutePointsFragment"
+    android:layout_marginBottom="12dp"
+    android:layout_marginTop="32dp"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="38dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.45"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="hidden"
+                android:textSize="36sp"
+                android:textAlignment="viewEnd"
+                android:fontFamily="@font/economica"
+                android:visibility="invisible"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Optimal Route"
+                android:layout_gravity="center_vertical"
+                android:textSize="22sp"
+                android:textColor="?attr/colorControlNormal"
+                android:fontFamily="@font/tw_light"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.55"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/estimate_price"
+                android:text="360din"
+                android:textSize="48sp"
+                android:textAlignment="viewEnd"
+                android:fontFamily="@font/economica"/>
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:dividerColor="?attr/colorControlNormal"
+                android:layout_marginVertical="@dimen/row_spacing_standard"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/estimate_route"
+                android:text="17min | 3.6km"
+                android:textSize="20sp"
+                android:textAlignment="viewEnd"
+                android:fontFamily="@font/tw_extra_light"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/passenger_accept_route"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Accept Route"
+        android:layout_gravity="end"
+        android:textAlignment="viewEnd"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginEnd="32dp"
+        style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+</LinearLayout>

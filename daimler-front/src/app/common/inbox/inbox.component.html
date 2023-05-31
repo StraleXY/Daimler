@@ -1,0 +1,17 @@
+<h1 class="header">INBOX</h1>
+<div class="card semi-transparent drop-shadow">
+    <div *ngIf="noData" class="no-data-container">
+        <p class="no-data-text">INBOX IS EMPTY</p>
+    </div>
+
+    <div class="inbox-item" *ngFor="let inbox of inboxes">
+        <a (click)="showChatClick(inbox)">
+            <p class="with-item">{{inbox.with.name}} {{inbox.with.surname}}</p>
+            <p class="type-item" [ngStyle]="{'color' : inbox.lastMessage.type == 'PANIC' ? '#f7302d' : 'black'}">{{inbox.lastMessage.type == "RIDE" ? inbox.destination : inbox.lastMessage.type == "PANIC" ? "PANIC CHAT" : "SUPPORT CHAT"}}</p>
+            <p class="message-item">{{inbox.lastMessage.message}}</p>
+            <p class="date-item">{{inbox.lastMessage.timestamp | date:'dd/MM/yyyy'}}</p>
+            <hr *ngIf="inboxes.indexOf(inbox) != inboxes.length - 1">
+        </a>
+    </div>
+    
+</div>

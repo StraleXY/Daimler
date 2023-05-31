@@ -1,0 +1,52 @@
+<h1 class="header">RIDE HISTORY</h1>
+<div class="card semi-transparent drop-shadow">
+    <div *ngIf="noData">
+        <p class="no-data">NO RIDES</p>
+    </div>
+
+    <mat-form-field appearance="outline" style="margin-bottom: 1em;">
+        <mat-label>Sort By</mat-label>
+        <mat-select (selectionChange)="sortSelectionChange($event)" [value]="'id'">
+            <mat-option *ngFor="let option of sortOptions" [value]="option.value">
+                {{option.viewValue}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <div class="result-container">
+        <tr class="ride-row" *ngFor="let ride of rides.results">
+            <td class="ride-row">
+                <div class="data-grid">
+
+                    <p class="key-item">Date:</p>
+                    <p class="value-item">{{ride.startTime}}</p>
+
+                    <p class="key-item">Cost:</p>
+                    <p class="value-item">{{ride.totalCost}} RSD</p>
+
+                    <p class="key-item">Locations:</p>
+
+                    <div class="value-item">
+                        <div *ngFor="let loc of getLocationList(ride.locations)">
+                            <p class="value-item">{{loc.address}}</p>
+                            <!-- <p class="location-item">{{loc.address}}</p> -->
+                        </div>
+                    </div>
+                    
+
+                </div>
+                <div class="button-container">
+                    <button mat-button color="primary" class="button" (click)="detailsClick(ride)">DETAILS</button>
+                </div>
+                <hr *ngIf="ride.id != lastItemId">
+            </td>
+        </tr>
+    </div>
+    
+
+    <div class="navigation-container">
+        <button #previous id="previous" mat-icon-button color="primary" class="icon" (click)="previousClick()"><mat-icon>arrow_back_ios</mat-icon></button>
+        <p id="page-nummber">Page {{page}}</p>
+        <button #next id="next" mat-icon-button color="primary" class="icon" (click)="nextClick()"><mat-icon>arrow_forward_ios</mat-icon></button>
+    </div>
+</div>

@@ -1,0 +1,60 @@
+<div class="daimler-passenger-home">
+    <app-sidebar [selected]="1" [apiPath]="'passenger'"></app-sidebar>
+    <div class="row d-flex align-items-center justify-content-center">
+        <div #mapContent class="map-container">
+            <div class="top-right">
+                <div *ngIf="getRouteVisibility" @inOutPaneAnimation>
+                    <app-get-a-ride (isToggled)="toggle($event)" (estimation)="estimate($event)"
+                        (waypoints)="waypointEvent($event)" (vehicleType)="vehicleTypeEvent($event)"
+                        [firstInput]="first" [secondInput]="second"></app-get-a-ride>
+                </div>
+
+                <div *ngIf="scheduledVisibility" @inOutPaneAnimation>
+                    <app-scheduled-ride [ride]="ride"></app-scheduled-ride>
+                </div>
+
+                <div *ngIf="routeCompactVisibility" @inOutPaneAnimation>
+                    <div class="devider"></div>
+                    <app-route-compact class="top-right-second" [data]="estimation"></app-route-compact>
+                </div>
+                <div *ngIf="confirmRideVisibility" @inOutPaneAnimation>
+                    <button class="confirm-ride" mat-raised-button color="primary" (click)="confirmeClick()">CONFIRM ROUTE</button>
+                </div>
+
+                <div *ngIf="passengerCountVisibility" @inOutPaneAnimation>
+                    <div class="devider"></div>
+                    <app-passenger-count (onGroupClicked)="groupClick()" (onSoloClicked)="moreSettingsClick()"></app-passenger-count>
+                </div>
+
+                <div *ngIf="moreSettingsVisibility" @inOutPaneAnimation>
+                    <div class="devider"></div>
+                    <app-more-ride-settings (onNextClick)="createRide($event)"></app-more-ride-settings>
+                </div>
+
+                <div *ngIf="linkedPersonsVisibility" @inOutPaneAnimation>
+                    <div class="devider"></div>
+                    <app-linked-ride-persons #linkedPeople (next)="moreSettingsClick()"
+                        [inviterId]="inviterId" [addressFrom]="addressFrom" [addressTo]="addressTo"
+                        (passengerList)="passengerList($event)"></app-linked-ride-persons>
+                </div>
+
+                <div *ngIf="driverComingVisibility" @inOutPaneAnimation>
+                    <div class="devider"></div>
+                    <app-driver-coming [ride] = "ride"></app-driver-coming>
+                </div>
+
+                <div *ngIf="rideInProgressVisibility" @inOutPaneAnimation>
+                    <div class="devider"></div>
+                    <app-ride-in-progress-passenger [ride] = "ride" (end)="end($event)"></app-ride-in-progress-passenger>
+                </div>
+
+            </div>
+
+            <app-map *ngIf="isOrdering" class="map-view" [waypoints]="waypoints" [isRoute]="true" [isMarker]="true"
+                (first)="setFirst($event)" (second)="setSecond($event)"></app-map>
+
+            <app-map *ngIf="!isOrdering" class="map-view" [waypoints]="waypoints" [isRoute]="true" [isInteractive]="false"
+                [isDraggable]="false" [isVehicleMarker]="true" [vehicleLocation]="currentVehicleLocation"></app-map>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,67 @@
+.card {
+    width: 100vw/4;
+    height: 820px;
+    padding-top: 3.5em;
+    padding-left: 2em;
+    padding-right: 2em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    align-items: center;
+    align-self: center;
+}
+
+.header {
+    font-size: 30pt;
+    margin-left: 0.5em;
+    margin-right: 1em;
+    margin-top: 0.5em;
+    opacity: 0.75;
+}
+
+.button {
+    align-self: flex-end;
+    margin-top: 1em;
+    font-weight: bold;
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 7em;
+    align-self: center;
+}
+
+.image-div {
+    width: 100%;
+}
+
+.image-button {
+    width: 100%;
+}
+
+form {
+    padding: 1em;
+}
+
+mat-form-field {
+    width: 100%;
+    margin: -0.25em;
+}
+
+.submit-button {
+    font-weight: bold;
+    margin-top: 100px;
+    width: 100%;
+}
+
+section {
+    text-align: center;
+    width: 100%;
+}
+
+.checkbox-baby {
+    padding: 0;
+}
+
+.checkbox-pet {
+    padding: 0;
+}

@@ -1,0 +1,24 @@
+<div class="card semi-transparent drop-shadow">
+    <p class="subtitle">Link people</p>
+    <form
+        class="form"
+        [formGroup]="linkedPassengersForm">
+        <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Passenger Email</mat-label>
+            <div class="controls-container">
+                <input matInput name="passengerEmail" formControlName="linkedInput">
+                <button mat-icon-button color="primary" style="margin-top: -0.3em; margin-bottom: -0.2em;" (click)="submit()">
+                    <mat-icon>add</mat-icon>
+                </button>
+            </div>
+        </mat-form-field>
+    </form>
+    <div class="row profile-container" *ngFor="let passenger of linkedPassengerList">
+        <div class="col-9 profile-info" [style.opacity] = "passenger.responded ? '1' : '0.4'" [style.color] = "passenger.color">
+            <mat-icon>{{passenger.responded ? (passenger.accepted ? 'check' : 'block') : 'schedule'}}</mat-icon>
+            <p class="email">{{passenger.email}}</p>
+        </div>
+    </div>
+    <hr *ngIf="linkedPassengerList.length > 0">
+    <button class="confirm" mat-button color="primary" (click)="confirmClick()">CONFIRM</button>
+</div>

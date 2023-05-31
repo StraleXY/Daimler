@@ -1,0 +1,11 @@
+<h1 class="header">BASIC INFO</h1>
+<div class="card semi-transparent drop-shadow">
+    <div class="data-grid">
+        <p class="key-item">Name:</p>
+        <p class="value-item">{{basicInfoDTO.name}} {{basicInfoDTO.surname}}</p>
+
+        <p class="key-item">Email:</p>
+        <p class="value-item">{{basicInfoDTO.email}}</p>
+    </div>
+    <button mat-button color="primary" class="button" (click)="toggleEditInfo()">EDIT</button>
+</div>

@@ -1,0 +1,16 @@
+<div class="card semi-transparent drop-shadow">
+
+    <h1>{{estimatedTime}} mins</h1>
+    <p id="on-the-way">Your driver is on the way.</p>
+    <p id="vehicle-info">{{vehicle.licenseNumber}} ● {{vehicle.model}}</p>
+
+    <hr>
+
+    <div class="row profile-container">
+        <img class="col-4 profile-image" src='{{driver.profilePicture | urlSentizer}}'/>
+        <div class="col-8 profile-info">
+            <p class="value-item">{{driver.name}} {{driver.surname}}</p>
+            <p class="phone">{{driver.telephoneNumber}}</p>
+        </div>
+    </div>
+</div>

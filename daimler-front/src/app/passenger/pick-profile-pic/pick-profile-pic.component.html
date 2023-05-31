@@ -1,0 +1,9 @@
+<h1 class="header" *ngIf="hasTitle">EDIT</h1>
+<div style="height: 0.5em;" *ngIf="!hasTitle"></div>
+<div class="card semi-transparent drop-shadow">
+    <img [src]="selectedProfilePicUrl" class="profile-image"/>
+    
+    <button type="button" mat-button (click)="fileInput.click()" class="button">PICK AN IMAGE</button>
+    <input hidden (change)="onFileSelected($event)" #fileInput type="file">
+    <span class="file-name">{{selectedProfilePic?.name}}</span>
+</div>

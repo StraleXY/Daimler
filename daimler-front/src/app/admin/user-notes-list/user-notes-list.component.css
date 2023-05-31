@@ -1,0 +1,66 @@
+.card {
+    width: 100vw/6;
+    height: 88vh;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    padding: 8%;
+    position: relative;
+}
+
+.card::-webkit-scrollbar {
+    display: none;
+}
+
+.header {
+    font-size: 30pt;
+    margin-left: 0.5em;
+    margin-right: 1em;
+    margin-top: 0.5em;
+    opacity: 0.75;
+}
+
+.no-data {
+    font-family: 'Titillium Web';
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    margin-left: 0.25em;
+    position: absolute;
+    top: 50%;
+}
+
+.navigation-container {
+    position: absolute;
+    bottom: 1.5em;
+    display: grid;
+    width: 84%;
+    grid-template-columns: 25% 50% 25%;
+}
+
+#page-nummber {
+    font-family: 'Titillium Web';
+    font-size: 1.2rem;
+    margin-top: 0.6em;
+    text-align: center;
+}
+
+#next {
+    position: absolute;
+    right: 0;
+}
+
+.button {
+    align-self: flex-end;
+    font-weight: bold;
+    margin-top: -1em;
+}
+
+#notes-div {
+    height: 100%;
+    margin-bottom: 5em;
+    overflow-y: scroll;
+    position: relative;
+}
+#notes-div::-webkit-scrollbar {
+    display: none;
+}

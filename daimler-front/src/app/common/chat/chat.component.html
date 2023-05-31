@@ -1,0 +1,27 @@
+<h1 class="header">CHAT {{chatTitle}}</h1>
+<div class="card semi-transparent drop-shadow">
+
+    <div class="messages-container" #scrollMe [scrollTop]="messages.totalCount === 0 ? 0 : scrollMe.scrollHeight">
+        <div *ngFor="let msg of messages.results" [ngStyle]="{'align-self' : msg.senderId == userId ? 'flex-end' : 'flex-start'}">
+            <div class="chat-bubble" [ngStyle]="{
+                'background-color' : msg.senderId == userId ? 'black' : 'transparent',
+                'color' : msg.senderId == userId ? 'white' : 'black'}">
+                <p class="chat-text">{{msg.message}}</p>
+                <p class="chat-timestamp">{{msg.timestamp | date: "hh:mm"}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="send-container">
+        <hr>
+        <div id="search-controls-form">
+            <mat-form-field appearance="outline">
+                <mat-label>Message</mat-label>
+                <input matInput #messageField name="messageField"  [(ngModel)]="ongoingMessage" (keyup.enter)="sendMessageClick(messageField.value)">
+            </mat-form-field>
+            <div></div>
+            <button id="send-button" mat-stroked-button color="primary" (click)="sendMessageClick(messageField.value)">SEND</button>
+        </div>
+    </div>
+
+</div>

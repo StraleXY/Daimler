@@ -1,0 +1,20 @@
+<h1 class="header">BASIC INFO</h1>
+<div class="card semi-transparent drop-shadow">
+    <img [src]="selectedProfilePic" class="profile-image"/>
+    
+    <div class="data-grid" id="user-basic-info">
+        <p class="key-item">Name:</p>
+        <p class="value-item">{{basicInfoDTO.name}} {{basicInfoDTO.surname}}</p>
+
+        <p class="key-item">Email:</p>
+        <p class="value-item">{{basicInfoDTO.email}}</p>
+        
+        <p class="key-item">Phone:</p>
+        <p class="value-item">{{basicInfoDTO.telephoneNumber}}</p>
+
+        
+        <p class="key-item">Address:</p>
+        <p class="value-item">{{basicInfoDTO.address}}</p>
+    </div>
+    <button mat-button color="primary" class="button" (click)="toggleEditInfo()">EDIT</button>
+</div>

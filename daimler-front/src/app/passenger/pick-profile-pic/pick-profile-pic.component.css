@@ -1,0 +1,32 @@
+.card {
+    width: 100vw/6;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    padding: 2em;
+}
+
+.header {
+    font-size: 30pt;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    margin-top: 0.5em;
+    opacity: 0.75;
+}
+
+.profile-image {
+    border-radius: 50%;
+    margin: 3em;
+    width: 7em;
+    align-self: center;
+}
+
+.button {
+    align-self: center;
+    margin-top: 1em;
+    font-weight: bold;
+}
+
+.file-name {
+    align-self: center;
+    font-family: "Titillium Web";
+}

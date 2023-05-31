@@ -1,0 +1,31 @@
+<div class="daimler-login-main">
+    <app-nav-main></app-nav-main>
+    <div class="daimler-login-div row d-flex align-items-center justify-content-center">
+        <div class="left-div col-4"></div>
+        <div class="login-content col-3">
+            <h1 class="header">LOGIN</h1>
+            <form
+                class="form"
+                [formGroup]="loginForm"
+                (ngSubmit)="submit($event)">
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput name="email" formControlName="email">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input matInput [type]="hidePassword ? 'password' : 'text'"
+                 name="password" formControlName="password">
+                <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword; prevent($event)"
+                    [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hidePassword">
+                    <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>
+            <button mat-raised-button color="primary"
+                type="submit" id="button_login">LOGIN</button>
+            </form>
+            <a href="/recovery"><p>FORGOT PASSWORD?</p></a>
+        </div>
+        <div class="right-div col-4"></div>
+    </div>
+</div>

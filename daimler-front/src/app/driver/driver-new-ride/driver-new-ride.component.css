@@ -1,0 +1,93 @@
+.card {
+    width: 21vw;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 1em;
+    padding-bottom: 2em;
+}
+
+.subtitle {
+    font-family: "Titillium Web";
+    font-size: 17pt;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 0.5em;
+}
+
+.route-content {
+    margin-top: 1em;
+    padding-right: 0.5em;
+}
+
+.price {
+    font-family: "Economica";
+    font-size: 28pt;
+    text-align: right;
+    margin-bottom: -0.5em;
+}
+
+.details {
+    font-family: "Titillium Web";
+    font-size: 13pt;
+    text-align: right;
+    margin-top: -0.5em;
+}
+
+.transport-details {
+    display: flex;
+    align-self: center;
+    margin-top: -0.25em;
+    margin-bottom: -1.25em;
+}
+
+.transport-option {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    font-size: 12pt;
+    font-weight: 400;
+}
+
+.profile-container {
+    padding-top: 0.75em;
+}
+
+.profile-info {
+    padding: 0;
+    padding-left: 0.25em;
+    align-self: center;
+}
+
+.profile-image {
+    border-radius: 50%;
+    align-self: center;
+}
+
+.value-item {
+    font-family: 'Titillium Web';
+    font-weight: bold;
+    text-align: start;
+    margin-bottom: 0;
+}
+
+.email {
+    font-family: 'Titillium Web';
+    font-size: 11.5pt;
+    margin-bottom: 0;
+}
+
+.button {
+    z-index: 55;
+    letter-spacing: .2rem;
+    padding: 1.65em;
+    margin-top: 0.45em;
+    border-radius: 0.65em;
+    border-width: 0;
+    width: 100%;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

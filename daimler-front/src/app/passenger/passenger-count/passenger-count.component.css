@@ -1,0 +1,28 @@
+.card {
+    width: 21vw;
+    padding-left: 1em;
+    padding-right: 1.5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.options-container {
+    display: flex;
+}
+
+.option {
+    text-align: center;
+}
+
+.image-icon {
+    width: 5em;
+    opacity: 0.85;
+    padding: 0.65em;
+}
+
+button {
+    width: 100%;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    font-size: 11pt;
+}

@@ -1,0 +1,14 @@
+<div class="root">
+    <app-sidebar [selected]="3" [apiPath]="'driver'"></app-sidebar>
+    <div class="row d-flex justify-content-center cols-content-div">
+        <div class="col-3">
+            <app-route-history-card #basicHistoryCard (onPageRequested)="pageRequested($event)" (onDetailsRequested)="detailsRequested($event)"></app-route-history-card>
+        </div>
+        <div class="col-6">
+            <app-detailed-ride-preview #detailsCard [showControls]="false"></app-detailed-ride-preview>
+        </div>
+        <div class="col-3">
+            <app-users-preview-card #passengersPreview [Title]="'PASSENGERS'"></app-users-preview-card>
+        </div>
+    </div>
+</div>

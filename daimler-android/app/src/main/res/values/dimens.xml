@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="corner_radius_standard">15dp</dimen>
+    <dimen name="row_spacing_standard">4dp</dimen>
+
+    <!-- Chart size -->
+    <dimen name="default_gridLinesStrokeSize">1dp</dimen>
+    <dimen name="default_barMargin">1dp</dimen>
+    <dimen name="default_barMinHeightCorrection">2dp</dimen>
+    <dimen name="button_text_small">14sp</dimen>
+    <dimen name="row_spacing_small">2dp</dimen>
+    <dimen name="appbar_items_spacing">24dp</dimen>
+
+</resources>

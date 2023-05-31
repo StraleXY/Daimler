@@ -1,0 +1,15 @@
+<div class="daimler-passenger-account">
+    <app-sidebar [selected]="4" [apiPath]="'admin'" [isAdmin]="true"></app-sidebar>
+    <div class="row d-flex align-items-top justify-content-center cols-content-div">
+        <div class="col-3 content-col">
+            <app-admin-basic-info-card [basicInfoDTO]="AdminData" (editInfo)="showEditInfo($event)"></app-admin-basic-info-card>
+            <app-admin-edit-basic-info-card [basicInfoDTO]="AdminData" (editInfo)="showEditInfo($event)" *ngIf="EditData"></app-admin-edit-basic-info-card>
+        </div>
+        <div class="col-6 content-col">
+            <app-admin-driver-register></app-admin-driver-register>
+        </div>
+        <div class="col-3">
+            <app-driver-update-requests [driverRequests]="driverRequests"></app-driver-update-requests>
+        </div>
+    </div>
+</div>

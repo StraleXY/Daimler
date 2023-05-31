@@ -1,0 +1,35 @@
+<h1 class="header">FAVORITE ROUTES</h1>
+<div class="card semi-transparent drop-shadow">
+    <div *ngIf="noData" class="no-data-container">
+        <p class="no-data-text">NO ROUTES</p>
+    </div>
+
+    <tr class="ride-row" *ngFor="let route of routes">
+        <td class="ride-row">
+            <div class="data-grid">
+
+                <p class="key-item">From:</p>
+                <p class="value-item">{{route.departure.address}}</p>
+
+                <p class="key-item">To:</p>
+                <p class="value-item">{{route.destination.address}}</p>
+<!-- 
+                <p class="key-item">Locations:</p>
+
+                <div class="value-item">
+                    <div *ngFor="let loc of getLocationList(ride.locations)">
+                        <p class="value-item">{{loc.address}}</p>
+                        <p class="location-item">{{loc.address}}</p>
+                    </div>
+                </div>
+                 -->
+
+            </div>
+            <div class="button-container">
+                <button mat-button color="primary" class="button" (click)="orderClick(route)">ORDER</button>
+            </div>
+            <hr *ngIf="route.id != lastItemId">
+        </td>
+    </tr>
+    
+</div>

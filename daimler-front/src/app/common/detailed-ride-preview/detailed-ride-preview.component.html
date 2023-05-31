@@ -1,0 +1,91 @@
+<h1 class="header">DETAILS</h1>
+<div class="card semi-transparent drop-shadow row">
+    <div class="content" *ngIf="ride.totalCost != 0">
+        <div class="top">
+            <!-- Map View -->
+            <div class="left">
+                <div class="border" style="height: 100%;">
+                    <app-map class="map-view" [waypoints]="waypoints" [isRoute]="true" [isDraggable]="false"
+                        [isInteractive]="false"></app-map>
+                </div>
+            </div>
+            <!-- Ride Information -->
+            <div class="right">
+                <div class="data-grid">
+
+                    <p class="key-item">Started:</p>
+                    <p class="value-item">{{ride.startTime}}</p>
+
+                    <p class="key-item">Finished:</p>
+                    <p class="value-item">{{ride.endTime}}</p>
+
+                    <p class="key-item">Cost:</p>
+                    <p class="value-item">{{ride.totalCost}} RSD</p>
+
+                    <p class="key-item">Locations:</p>
+                    <div class="value-item">
+                        <div *ngFor="let loc of getLocationList(ride.locations)">
+                            <p class="value-item">{{loc.address}}</p>
+                            <!-- <p class="location-item">{{loc.address}}</p> -->
+                        </div>
+                    </div>
+
+                    <p class="key-item">Total Time:</p>
+                    <p class="value-item">{{ride.estimatedTimeInMinutes}}min</p>
+
+                    <p class="key-item">Pets:</p>
+                    <p class="value-item" [innerText]="ride.petTransport ? 'Yes' : 'No'" ></p>
+                    <p class="key-item">Babies:</p>
+                    <p class="value-item" [innerText]="ride.babyTransport ? 'Yes' : 'No'" ></p>
+
+                    <p class="key-item">Vehicle Type:</p>
+                    <p class="value-item">{{ride.vehicleType}}</p>
+
+                    <p class="key-item">Status:</p>
+                    <p class="value-item">{{ride.status}}</p>
+
+                    <p class="key-item">Passenger:</p>
+                    <p class="value-item">{{ride.passengers.length}}</p>
+
+                </div>
+                <div *ngIf="showControls" class="controls-container">
+                    <button mat-button color="primary" class="button" (click)="showRateDialogClick()">RATE</button>
+                    <button mat-button color="primary" class="button button-order" (click)="orderAgainClick()">ORDER AGAIN</button>
+                    <button mat-button color="primary" class="button button-order" (click)="addToFavorites()">ADD TO FAVORITES</button>
+                </div>
+            </div>
+        </div>
+        <!-- Reviews -->
+        <div class="bottom">
+            <div *ngIf="reviews.length == 0" class="no-data-container">
+                <p class="center-vertical no-data-text">NO REVIEWS</p>
+            </div>
+            <ul class="reviewsScroll">
+                <li *ngFor="let rev of reviews" class="reviewCard semi-transparent">
+                    <div class="review-content">
+                        <div class="review-data-grid">
+                            <p class="review-category-rating">{{rev.driverReview.rating}}</p>
+                            <div style="position: relative;">
+                                <div class="center-vertical">
+                                    <p class="review-category-title">Driver Review</p>
+                                    <p class="value-item">{{rev.driverReview.comment}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr style="margin: 0;">
+                        <div class="review-data-grid">
+                            <p class="review-category-rating">{{rev.vehicleReview.rating}}</p>
+                            <div style="position: relative;">
+                                <div class="center-vertical">
+                                    <p class="review-category-title">Vehicle Review</p>
+                                    <p class="value-item">{{rev.vehicleReview.comment}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>

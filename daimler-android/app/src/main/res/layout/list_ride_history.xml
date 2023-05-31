@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingHorizontal="32dp"
+    android:paddingVertical="20dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight=".75">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:alpha=".6">
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:gravity="end"
+                android:textColor="?colorPrimary"
+                android:text="@string/favourite_route_from"
+                android:layout_marginVertical="@dimen/row_spacing_standard"
+                android:fontFamily="@font/tw_light"/>
+            <TextView
+                android:id="@+id/rideSourceAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:paddingStart="20dp"
+                android:layout_marginVertical="@dimen/row_spacing_standard"
+                android:fontFamily="@font/tw_light"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:textSize="19sp"
+                android:gravity="end"
+                android:textColor="?colorPrimary"
+                android:text="@string/favourite_route_to"
+                android:layout_marginVertical="@dimen/row_spacing_standard"
+                android:fontFamily="@font/tw_light"/>
+            <TextView
+                android:id="@+id/rideDestinationAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="19sp"
+                android:paddingStart="20dp"
+                android:layout_marginVertical="@dimen/row_spacing_standard"
+                android:fontFamily="@font/tw_light"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight=".25">
+        <TextView
+            android:id="@+id/rideDateTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:layout_marginVertical="@dimen/row_spacing_standard"
+            android:textAlignment="viewEnd"
+            android:fontFamily="@font/tw_light"/>
+    </LinearLayout>
+
+
+</LinearLayout>

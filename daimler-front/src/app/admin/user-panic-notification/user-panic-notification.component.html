@@ -1,0 +1,13 @@
+<div class="card semi-transparent drop-shadow">
+
+    <h1>User is panicing!</h1>
+    <hr> 
+    <div class="row profile-container">
+        <img class="col-4 profile-image" src='{{panicDTO.user.profilePicture | urlSentizer}}'/>
+        <div class="col-8 profile-info">
+            <p class="value-item">{{panicDTO.user.name}} {{panicDTO.user.surname}}</p>
+            <p class="phone">{{panicDTO.user.telephoneNumber}}</p>
+        </div>
+    </div>
+    <button class="button" mat-flat-button color="primary" (click)="chatClick()">OPEN CHAT</button>
+</div>

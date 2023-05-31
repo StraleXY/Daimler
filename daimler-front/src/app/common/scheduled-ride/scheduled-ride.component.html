@@ -1,0 +1,33 @@
+<div class="card semi-transparent drop-shadow">
+
+    <div class="row route-content">
+        <div class="col-5 d-flex align-items-center justify-content-center">
+            <h1 class="subtitle">Scheduled</h1>
+        </div>
+        <div class="col-7 align-items-center justify-content-center">
+            <p class="price">{{ride.totalCost}}din</p>
+            <hr>
+            <p class="details">{{getString()}}</p>
+            <!--{{estimate.distance.toFixed(1)}}-->
+        </div>
+    </div>
+
+    <hr>
+    <div class="transport-details">
+        <p class="transport-option" [ngStyle]="{ 'font-weight' :  ride.babyTransport ? 500 : 400, 'opacity' : ride.babyTransport ? 1 : 0.4 }">BABY</p>
+        <p class="transport-option" [ngStyle]="{ 'font-weight' :  ride.petTransport ? 500 : 400, 'opacity' : ride.petTransport ? 1 : 0.4 }">PETS</p>
+    </div>
+    <hr>
+
+    <td class="ride-row">
+        <div class="data-grid">
+
+            <p class="key-item">From:</p>
+            <p class="value-item">{{ride.locations[0].departure.address}}</p>
+
+            <p class="key-item">To:</p>
+            <p class="value-item">{{ride.locations[0].destination.address}}</p>
+        </div>
+    </td>
+    
+</div>

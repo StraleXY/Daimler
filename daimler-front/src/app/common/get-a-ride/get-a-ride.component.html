@@ -1,0 +1,25 @@
+<div class="card semi-transparent drop-shadow">
+    <h1 class="header">GET A RIDE</h1>
+    <form
+        class="form"
+        [formGroup]="getARide"
+        (ngSubmit)="submit($event)">
+        <mat-form-field appearance="outline">
+            <mat-label>Car type</mat-label>
+            <mat-select name="carType" formControlName="carType">
+                <mat-option *ngFor="let car of cars" [value]="car.value">
+                    {{car.viewValue}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Pickup Adress</mat-label>
+            <input matInput name="pickupAddress" formControlName="pickupAddress">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Destination Adress</mat-label>
+            <input matInput name="destinationAddress" formControlName="destinationAddress">
+        </mat-form-field>
+        <button id="get-a-ride-calculate" mat-raised-button color="primary">CALCULATE</button>
+    </form>
+</div>

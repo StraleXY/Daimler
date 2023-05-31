@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:maxWidth="450dp"
+    android:minWidth="380dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.passenger.fragment.PassengerNewRoutePointsFragment"
+    android:layout_marginBottom="12dp"
+    android:layout_marginTop="32dp"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Car Type"
+        android:textAlignment="center"
+        android:fontFamily="@font/tw_regular"
+        android:textSize="24sp"
+        android:textColor="@color/primary"
+        android:layout_marginBottom="8dp"/>
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/passenger_car_type_selector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="6dp"
+        android:gravity="center"
+        app:singleSelection="true"
+        app:selectionRequired="true">
+        <Button
+            android:id="@+id/passenger_car_type_standard"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text="Limousine"
+            android:backgroundTint="@color/transparent"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+        <Button
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="Coupe"
+            android:backgroundTint="@color/transparent"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+        <Button
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:text="SUV"
+            android:backgroundTint="@color/transparent"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="12dp"
+        app:dividerInsetStart="38dp"
+        app:dividerInsetEnd="38dp"/>
+
+    <CheckBox
+        android:id="@+id/passenger_baby_transport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Baby transport"
+        android:textSize="16sp"
+        android:fontFamily="@font/tw_extra_light"
+        android:layout_marginStart="50dp"
+        style="@style/Widget.App.CheckBox"/>
+    <CheckBox
+        android:id="@+id/passenger_pet_transport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pet transport"
+        android:textSize="16sp"
+        android:fontFamily="@font/tw_extra_light"
+        android:layout_marginStart="50dp"
+        style="@style/Widget.App.CheckBox"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/passenger_route_details_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:layout_gravity="end"
+        android:textAlignment="viewEnd"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginEnd="32dp"
+        style="@style/Widget.MaterialComponents.Button.TextButton"/>
+</LinearLayout>

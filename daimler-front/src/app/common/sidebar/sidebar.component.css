@@ -1,0 +1,16 @@
+.root {
+    width: 55px;
+    height: 100vh;
+    background-color: #181818;
+    position: absolute;
+}
+
+.icon {
+    margin-left: 0.1em;
+}
+.exit {
+    margin-left: 0.1em;
+    position: absolute;
+    bottom: 0.5em;
+    left: 0;
+}

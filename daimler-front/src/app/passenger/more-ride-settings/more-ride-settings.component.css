@@ -1,0 +1,73 @@
+.card {
+    width: 21vw;
+    padding-left: 1em;
+    padding-right: 1.5em;
+    padding-top: 1em;
+    padding-bottom: 1.5em;
+}
+
+.subtitle {
+    font-family: "Titillium Web";
+    font-size: 14pt;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 0.5em;
+    margin-top: 0.5em;
+}
+
+.fix-end {
+    text-align: end;    
+}
+
+button {
+    font-weight: 500;
+    margin-top: 0.5em;
+    margin-bottom: 0;
+    font-size: 11pt;
+    letter-spacing: .2rem;
+}
+
+.time-picker-container {
+    display: flex;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    align-self: center;
+}
+
+.time-picker-column {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.time-picker-separator {
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+    margin-top: 0.25em;
+    align-self: center;
+    font-size: 20pt;
+}
+
+.time-picker-input {
+    background-color: transparent;
+    width: 1.75em;
+    border-color: transparent;
+    text-align: center;
+    font-size: 20pt;
+    font-family: 'Titillium Web';
+}
+.time-picker-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.time-picker-buttons {
+    margin-bottom: -0.85em;
+    margin-top: -0.85em;
+    margin-left: 0.05em;
+    opacity: 0.6;
+}
+
+.time-picker-shift {
+    margin-left: -0.05em;
+}

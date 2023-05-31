@@ -1,0 +1,59 @@
+<div class="daimler-register-main">
+    <app-nav-main></app-nav-main>
+    <div class="daimler-register-div row d-flex align-items-center justify-content-center">
+        <div class="left-div col-4"></div>
+        <div *ngIf="showForm" class="register-content col-3">
+            <h1 class="header">REGISTER</h1>
+            <form
+                class="form"
+                [formGroup]="createUserForm"
+                (ngSubmit)="submit($event)">
+            <mat-form-field appearance="outline">
+                <mat-label>Name</mat-label>
+                <input matInput name="name" formControlName="name">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Surname</mat-label>
+                <input matInput name="surname" formControlName="surname">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Phone</mat-label>
+                <input matInput name="phone" formControlName="phone">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput name="email" formControlName="email">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Address</mat-label>
+                <input matInput name="address" formControlName="address">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input matInput [type]="hidePassword ? 'password' : 'text'"
+                 name="password" formControlName="password">
+                <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword; prevent($event)"
+                    [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hidePassword">
+                    <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Confirm password</mat-label>
+                <input matInput [type]="hideConfirmPassword ? 'password' : 'text'"
+                 name="confirmPassword" formControlName="confirmPassword">
+                <button mat-icon-button matSuffix (click)="hideConfirmPassword = !hideConfirmPassword; prevent($event)"
+                    [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hideConfirmPassword">
+                    <mat-icon>{{hideConfirmPassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>
+            <button mat-raised-button color="primary" id="register-button"
+                type="submit">REGISTER</button>
+            </form>
+        </div>
+        <div class="right-div col-4"></div>
+    </div>
+    <div *ngIf="!showForm" class="activation-link-content row d-flex align-items-center justify-content-center">
+        <h1>Activation link has been sent</h1>
+        <p>We've sent an activation link to your email. Please click the link in your inbox to activate your account</p>
+    </div>
+</div>

@@ -1,0 +1,104 @@
+<h1 class="header">DRIVER REGISTER</h1>
+<div class="card semi-transparent drop-shadow row">
+    <div class="row">
+        <div class="profile-picture col-12">
+            <div class="image-div d-flex align-items-center justify-content-center">
+                <img [src]="selectedProfilePicUrl" class="profile-image"/>
+            </div>
+            <div class="image-button d-flex align-items-center justify-content-center">
+                <button type="button" mat-button (click)="fileInput.click()" class="button">PICK AN IMAGE</button>
+                <input hidden (change)="onFileSelected($event)" #fileInput type="file">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+        <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <form
+                class="form"
+                [formGroup]="driverForm">
+                <mat-form-field appearance="outline">
+                    <mat-label>Name</mat-label>
+                    <input matInput name="name" formControlName="name">
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Surname</mat-label>
+                    <input matInput name="surname" formControlName="surname">
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Phone</mat-label>
+                    <input matInput name="phone" formControlName="phone">
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput name="email" formControlName="email">
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Address</mat-label>
+                    <input matInput name="address" formControlName="address">
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input matInput [type]="hidePassword ? 'password' : 'text'"
+                    name="password" formControlName="password">
+                    <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword; prevent($event)"
+                        [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hidePassword">
+                        <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Confirm password</mat-label>
+                    <input matInput [type]="hideConfirmPassword ? 'password' : 'text'"
+                    name="confirmPassword" formControlName="confirmPassword">
+                    <button mat-icon-button matSuffix (click)="hideConfirmPassword = !hideConfirmPassword; prevent($event)"
+                        [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hideConfirmPassword">
+                        <mat-icon>{{hideConfirmPassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                </mat-form-field>
+            </form>
+        </div>
+        <div class="col-6">
+            <form
+                class="form"
+                [formGroup]="vehicleForm">
+                <mat-form-field appearance="outline">
+                    <mat-label>Vehicle type</mat-label>
+                    <mat-select name="vehicleType" formControlName="vehicleType">
+                        <mat-option *ngFor="let type of vehicleTypes"
+                            [value]="type.value">
+                            {{type.viewValue}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Model</mat-label>
+                    <input matInput name="model" formControlName="model">
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>License number</mat-label>
+                    <input matInput name="licenseNumber"
+                    formControlName="licenseNumber">
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Number of seats</mat-label>
+                    <input matInput name="numberOfSeats"
+                    formControlName="numberOfSeats" type="number" value="1">
+                </mat-form-field>
+                <section class="example-section">
+                    <mat-checkbox color="primary"
+                        formControlName="hasBaby"
+                        class="checkbox-baby">Baby</mat-checkbox>
+                    <mat-checkbox color="primary"
+                        formControlName="hasPet"
+                        class="checkbox-pet">Pets</mat-checkbox>
+                </section>
+            </form>
+                <button mat-button color="primary" class="submit-button"
+                    (click)="save($event)">SAVE</button>
+        </div>
+    </div>
+</div>
