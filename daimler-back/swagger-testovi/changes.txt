@@ -1,0 +1,62 @@
+TOTAL (Ran 227 tests; 76 failed, 15 error, 136 passed)
+
+PASSENGER (Ran 23 tests; 11 failed, 1 error, 11 passed)
+- Promenili tip u coupe
+- Dodat passenger u listu passengera
+- 04 - key error message a dobar je
+- 11 - clashuje sa USER [1] promenom
+- 08, 09, 10 - Token verification, mi saljemo ceo token a ne id
+- 13 losa poruka ali radi
+- Updatovi koji bacaju 403 bacaju jer nije prosao account activation
+  ali bi inace radili posao
+- 22 puca jer forbidden (jwt pokusava da pristupi idu koji nije njegov)
+- 23 puca jer gore nije prosao verification pa ride body nije u requestu
+
+DRIVER (Ran 71 tests; 15 failed, 6 errors, 50 passed)
+- Promenili tip u coupe
+- Dodat passenger u listu passengera
+- 16-19 -> drugaciji endpoint za approve
+- 13, 25, 31, 38, 47, 63, 67, 70, 53, 59 -> poruka ne valja a valja
+- 41, 46 -> Not found, ne znam kako
+- 71 not found -> ne znam kako?
+- 29, 30, 32 - Neki driver test model? nesto puca na strani testova
+
+RIDE (Ran 53 tests; 21 failed, 6 errors, 26 passed)
+- Svuda promenili tip u coupe
+- Svuda dodat passenger u listu passengera
+- 06, 09, 13, 16, 20, 21, 24, 25, 28, 32, 40 -> poruka
+- 29 -> Zar ne treba da postoji end time?
+- STARTED -> ACTIVE
+- end ride poredi endTime sa None? pa sam zakomentarisao
+- testovi za favourite padaju (strahinja)
+
+REVIEW (Ran 15 tests; 7 failed, 1 error, 7 passed)
+- Promenili tip u coupe
+- 106 linija ocekuje da ne bude unauthorized?? (test 02)
+- test 05 -> porukica ne valja (a valja)
+- test 06 -> stavljen rideId umesto konkretnog vehicle id?
+- test 09 -> porukica ne valja (a valja)
+- test 11 -> porukica ne valja (a valja)
+- test 13 -> porukica ne valja (a valja)
+- test 12 -> stavljen rideId umesto konkretnog driver id?
+
+PANIC (Ran 3 tests; 1 failed, 2 passed)
+- Promenili tip u coupe
+- Ne vraca sve podatke kako bi trebalo (test 3)
+
+VEHICLE (Ran 6 tests; 6 passed)
+
+USER (Ran 53 tests; 21 failed, 5 errors, 27 passed)
+- Promenili tip u coupe
+- Prvi test sme da prodje kao unauthorized??
+- 02, 38, 43 - key error message, a lepo vraca
+- 03, 04 - Ako promeni sifru, ne moze da se uloguje starom sifrom
+  sto rezultira da nema response_body['accesstoken'] i sve ostalo
+  pada kao error
+- 07 - poruka nije dobra a jeste
+- 08-12 - recover/resetPassword endpoint promenjen
+- 15 - poruka ne valja a valja
+- Ostalo je promenjen endpoint/poruka ne valja a valja
+
+UNREGISTERED USER (Ran 3 tests; 3 passed)
+- Dodata je '/' na kraj endpointa
